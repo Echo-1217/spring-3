@@ -120,6 +120,7 @@ public class TransferService {
     public TransferResponse updateMGNI(UpdateRequest updateRequest) {
 
         TransferResponse response = new TransferResponse();
+
         // delete the old cash detail
         cashiRepository.deleteByMgniId(updateRequest.getId().toUpperCase());
         MGNI mgni = new MGNI();
@@ -193,8 +194,8 @@ public class TransferService {
         mgni.setUTime(dateTimeFormatter.format(LocalDateTime.now()));  // 異動時間
         mgni.setStatus("0");
         mgni.setCashiList(cashList);
+        cashiRepository.saveAll(cashList);
         mgniRepository.save(mgni);
-//        cashiRepository.saveAll(cashList);
         return "ok";
     }
 
