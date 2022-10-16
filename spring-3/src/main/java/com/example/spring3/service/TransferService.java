@@ -1,5 +1,6 @@
 package com.example.spring3.service;
 
+import com.example.spring3.controller.Receiver;
 import com.example.spring3.controller.dto.request.CreateRequest;
 import com.example.spring3.controller.dto.request.DeleteRequest;
 import com.example.spring3.controller.dto.request.ReadRequest;
@@ -39,8 +40,15 @@ public class TransferService {
     @Autowired
     private MgniRepository mgniRepository;
 
+    @Autowired
+    Receiver receiver;
+
     public ReadResponse getAllTransfer() {
         ReadResponse response = new ReadResponse();
+        if(!receiver.getReceiveResponse()){
+            response.setMessage("未收到 queue");
+            return response;
+        }
         response.setMgniList(mgniRepository.findAll());
         response.setMessage("read success");
         return response;
@@ -49,6 +57,12 @@ public class TransferService {
     public ReadResponse readTransfer(ReadRequest request) {
 
         ReadResponse response = new ReadResponse();
+
+        if(!receiver.getReceiveResponse()){
+            response.setMessage("未收到 queue");
+            return response;
+        }
+
         List<MGNI> mgniList = filterMgni(request);
 
         if (!mgniList.isEmpty()) {
@@ -86,15 +100,22 @@ public class TransferService {
         Page<MGNI> mgniPage = mgniRepository.findAll(spec, pageable);
         return mgniPage.getContent();
     }
+
     @Transactional
     public TransferResponse deleteTransfer(DeleteRequest request) {
         TransferResponse response = new TransferResponse();
+
+        if(!receiver.getReceiveResponse()){
+            response.setMessage("未收到 queue");
+            return response;
+        }
+
 //        MGNI mgni = mgniRepository.getMGNI(request.getId().toUpperCase());
 
         if (mgniRepository.findById(request.getId().toUpperCase()).isPresent()) {
             response.setMgni(mgniRepository.findById(request.getId().toUpperCase()).get());
             mgniRepository.deleteById(request.getId().toUpperCase());
-            cashiRepository.deleteByMgniId(request.getId().toUpperCase());
+//            cashiRepository.deleteByMgniId(request.getId().toUpperCase()); // cascadeType=All 所以不需要 delete cashi
             response.setMessage("deleted success");
             return response;
         }
@@ -102,8 +123,16 @@ public class TransferService {
         return response;
     }
 
+    @Transactional
     public TransferResponse createTransfer(CreateRequest createRequest) {
         TransferResponse response = new TransferResponse();
+
+        if(!receiver.getReceiveResponse()){
+            response.setMessage("未收到 queue");
+            return response;
+        }
+
+
         MGNI mgni = new MGNI();
         Date current = Calendar.getInstance().getTime();
         mgni.setId("MGI" + sdFormat.format(current));
@@ -111,8 +140,11 @@ public class TransferService {
 
         if (message.equals("ok")) {
             response.setMgni(mgni);
+            response.setMessage("create success");
+        } else {
+            response.setMessage(message);
         }
-        response.setMessage("create success");
+
         return response;
     }
 
@@ -120,6 +152,11 @@ public class TransferService {
     public TransferResponse updateMGNI(UpdateRequest updateRequest) {
 
         TransferResponse response = new TransferResponse();
+
+        if(!receiver.getReceiveResponse()){
+            response.setMessage("未收到 queue");
+            return response;
+        }
 
         // delete the old cash detail
         cashiRepository.deleteByMgniId(updateRequest.getId().toUpperCase());
@@ -136,8 +173,11 @@ public class TransferService {
 
         if (message.equals("ok")) {
             response.setMgni(mgni);
+            response.setMessage("update success");
+        } else {
+            response.setMessage(message);
         }
-        response.setMessage("update success");
+
         return response;
     }
 

@@ -1,9 +1,12 @@
 package com.example.spring3.model.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -54,7 +57,7 @@ public class MGNI implements Serializable {
     private String uTime;
 
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "mgniId", cascade = CascadeType.REFRESH)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "mgniId", cascade = CascadeType.ALL)
     //  FetchType.EAGER表示一併載入所有屬性所對應的資料
     //  mappedBy CASHI 合併的變數名稱
     //  CascadeType.ALL 無論儲存、合併、 更新或移除，一併對被參考物件作出對應動作。

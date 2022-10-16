@@ -1,5 +1,6 @@
 package com.example.spring3.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ import java.math.BigDecimal;
 @Table(name = "cashi")
 @IdClass(CASHI.CASHIID.class)
 @XmlAccessorType(XmlAccessType.FIELD)
+//@JsonIgnoreProperties(value= {"id"})
 public class CASHI implements Serializable {
     private static final Long serialVersionUID = 1L;
 
@@ -33,6 +35,7 @@ public class CASHI implements Serializable {
     @Column
     private BigDecimal amt;
 
+    
     @Data
     public static class CASHIID implements Serializable {
         private static final Long serialVersionUID = 1L;
