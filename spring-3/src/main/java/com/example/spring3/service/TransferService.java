@@ -247,7 +247,7 @@ public class TransferService {
         cashi.setCcy(ccy);
         cashi.setAccNo(accNo);
         cashi.setAmt(amt.setScale(2, RoundingMode.HALF_UP));
-//        cashiRepository.save(cashi);
+//        cashiRepository.save(cashi); // cascadeType=All 所以不需要 save cashi
         return cashi;
     }
 
