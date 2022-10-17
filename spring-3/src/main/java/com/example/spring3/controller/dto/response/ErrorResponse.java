@@ -11,7 +11,6 @@ import java.util.Map;
 
 public class ErrorResponse {
     private List<Map<String, String>> fieldError;
-
     private String error;
 
     // 處理 RequestBody 未通過基礎檢核所拋的 MethodArgumentNotValidException

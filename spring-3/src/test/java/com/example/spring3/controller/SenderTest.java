@@ -18,6 +18,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 import java.util.List;
 
@@ -51,9 +52,9 @@ public class SenderTest {
     }
 
     @Test
-    public void search() throws Exception {
+    public void readTransfer() throws Exception {
         // Arrange (初始化) 設定參數、期望回傳值
-        String strResponse = "[{\"id\":\"MGI20221014100311170\",\"time\":\"2022-10-14 10:03:11\",\"type\":\"1\",\"cmNo\":\"F62S\",\"kacType\":\"2\",\"bankNo\":\"123\",\"ccy\":\"USD\",\"pvType\":\"1\",\"bicaccNo\":\"2200546\",\"amt\":20221014.0000,\"ctName\":\"Echo\",\"ctTel\":\"0987654321\",\"status\":\"0\",\"cashiList\":[{\"mgniId\":\"MGI20221014100311170\",\"accNo\":\"01\",\"ccy\":\"USD\",\"amt\":20221014.0000}],\"utime\":\"2022-10-14 10:03:11\",\"itype\":\"1\",\"preason\":\"test\"}]";
+        String strResponse = "[{\"id\":\"MGI20220666666\",\"time\":\"2022-10-14 10:03:11\",\"type\":\"1\",\"cmNo\":\"F62S\",\"kacType\":\"2\",\"bankNo\":\"123\",\"ccy\":\"USD\",\"pvType\":\"1\",\"bicaccNo\":\"2200546\",\"amt\":20221014.0000,\"ctName\":\"Echo\",\"ctTel\":\"0987654321\",\"status\":\"0\",\"cashiList\":[{\"mgniId\":\"MGI20221014100311170\",\"accNo\":\"01\",\"ccy\":\"USD\",\"amt\":20221014.0000}],\"utime\":\"2022-10-14 10:03:11\",\"itype\":\"1\",\"preason\":\"test\"}]";
         ObjectMapper om = new ObjectMapper();
 
 
@@ -74,8 +75,13 @@ public class SenderTest {
         // 取得 function 的實際回傳值
         ResultActions resultActions =
                 // perform(request) 為做一個請求的建立，get(url) 為 request 的連結
-                mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/transfer/find/Dynamic")
-                                .contentType("application/json"))// @RequestBody
+                mockMvc.perform(
+                                get("/api/v1/transfer/find/Dynamic")// @RequestBody
+                                .content("{\"id\":\"\",\n" +
+                                        "    \"cmNo\": \"\",\n" +
+                                        "    \"bicaccNo\": \"\"}")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        )
                         // 輸出整個回應結果訊息
                         .andDo(print())
                         .andExpect(status().isOk());

@@ -22,13 +22,13 @@ import javax.validation.Valid;
 @RequestMapping(path = "api/v1/transfer")
 @Validated
 public class Sender {
+
     private final Logger logger = LogManager.getLogger(Sender.class);
     @Autowired
     private JmsTemplate jmsTemplate;
 
     @Autowired
     private  Queue responseQueue;
-
 
     @Autowired
     private  Queue requestQueue;
