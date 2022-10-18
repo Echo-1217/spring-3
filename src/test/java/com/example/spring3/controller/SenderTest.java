@@ -77,10 +77,10 @@ public class SenderTest {
         ResultActions resultActions =
                 // perform(request) 為做一個請求的建立，get(url) 為 request 的連結
                 mockMvc.perform(
-                                MockMvcRequestBuilders.get("/api/v1/transfer/find/Dynamic")// @RequestBody
+                                MockMvcRequestBuilders.get("/api/v1/transfer/find/Dynamic")
                                         .content("{\"id\":\"\",\n" +
                                                 "    \"cmNo\": \"\",\n" +
-                                                "    \"bicaccNo\": \"\"}")
+                                                "    \"bicaccNo\": \"\"}")// @RequestBody
                                         .contentType(MediaType.APPLICATION_JSON)
                         )
                         // 輸出整個回應結果訊息
@@ -97,13 +97,13 @@ public class SenderTest {
 
     @Test
     public void createTransfer() throws Exception {
+        String strResponse = "{\"id\":\"MGI2022010181020666\",\"time\":\"2022-10-18 10:20:66\",\"type\":\"1\",\"cmNo\":\"F62S\",\"kacType\":\"2\",\"bankNo\":\"123\",\"ccy\":\"USD\",\"pvType\":\"1\",\"bicaccNo\":\"2200546\",\"amt\":20221014.0000,\"ctName\":\"Echo\",\"ctTel\":\"0987654321\",\"status\":\"0\",\"cashiList\":[{\"mgniId\":\"MGI2022010181020666\",\"accNo\":\"01\",\"ccy\":\"USD\",\"amt\":20221014.0000}],\"utime\":\"2022-10-18 10:20:66\",\"itype\":\"1\",\"preason\":\"test\"}";
         // Arrange (初始化) 設定參數、期望回傳值
-        String strResponse = "[{\"id\":\"MGI2022010181020666\",\"time\":\"2022-10-18 10:20:66\",\"type\":\"1\",\"cmNo\":\"F62S\",\"kacType\":\"2\",\"bankNo\":\"123\",\"ccy\":\"USD\",\"pvType\":\"1\",\"bicaccNo\":\"2200546\",\"amt\":20221014.0000,\"ctName\":\"Echo\",\"ctTel\":\"0987654321\",\"status\":\"0\",\"cashiList\":[{\"mgniId\":\"MGI2022010181020666\",\"accNo\":\"01\",\"ccy\":\"USD\",\"amt\":20221014.0000}],\"utime\":\"2022-10-18 10:20:66\",\"itype\":\"1\",\"preason\":\"test\"}]";
         ObjectMapper om = new ObjectMapper();
 
         TransferResponse expected = new TransferResponse();
         expected.setMgni(om.readValue(strResponse,MGNI.class));
-
+        expected.setMessage("test Junit");
         // mocking
         when(this.service.createTransfer(any())).thenReturn(expected);
 
@@ -115,10 +115,25 @@ public class SenderTest {
         ResultActions resultActions =
                 // perform(request) 為做一個請求的建立，get(url) 為 request 的連結
                 mockMvc.perform(
-                                MockMvcRequestBuilders.get("/api/v1/transfer/find/Dynamic")// @RequestBody
-                                        .content("{\"id\":\"\",\n" +
-                                                "    \"cmNo\": \"\",\n" +
-                                                "    \"bicaccNo\": \"\"}")
+                                MockMvcRequestBuilders.post("/api/v1/transfer/create")
+                                        .content("{\n" +
+                                                "    \"cmNo\": \"test\",\n" +
+                                                "    \"kacType\": \"1\",\n" +
+                                                "    \"bankNo\": \"123\",\n" +
+                                                "    \"ccy\": \"ttt\",\n" +
+                                                "    \"pvType\": \"1\",\n" +
+                                                "    \"bicaccNo\": \"test\",\n" +
+                                                "    \"acc\": [\n" +
+                                                "        {\n" +
+                                                "            \"test\": 20221018\n" +
+                                                "        }\n" +
+                                                "        ,\n" +
+                                                "        {\n" +
+                                                "            \"test\": 20221018\n" +
+                                                "        }\n" +
+                                                "    ],\n" +
+                                                "    \"itype\": \"\"\n" +
+                                                "}")// @RequestBody
                                         .contentType(MediaType.APPLICATION_JSON)
                         )
                         // 輸出整個回應結果訊息
