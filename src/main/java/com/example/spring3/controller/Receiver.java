@@ -25,8 +25,12 @@ public class Receiver {
 
         if (null != message) {
             logger.info("{} : processing....\n", message);
-            this.receiveResponse = (true);
+            this.receiveResponse = true;
+        } else {
+            logger.info(" message is null \n");
+            this.receiveResponse = false;
         }
+
     }
 
 

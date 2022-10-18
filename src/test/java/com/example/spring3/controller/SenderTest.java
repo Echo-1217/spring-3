@@ -43,6 +43,7 @@ public class SenderTest {
 
     // 使用 MockBean 製作假元件
     @MockBean
+//    @Autowired
     private TransferService service;
 
     // before 的 function 會在一開始比 Test 先執行
@@ -73,14 +74,16 @@ public class SenderTest {
         String expectedStr = om.writeValueAsString(expected);
 
         // Act (行為)
+
+        String testResponseBody="{\"id\":\"\",\n" +
+                "    \"cmNo\": \"\",\n" +
+                "    \"bicaccNo\": \"\"}";
         // 取得 function 的實際回傳值
         ResultActions resultActions =
                 // perform(request) 為做一個請求的建立，get(url) 為 request 的連結
                 mockMvc.perform(
                                 MockMvcRequestBuilders.get("/api/v1/transfer/find/Dynamic")
-                                        .content("{\"id\":\"\",\n" +
-                                                "    \"cmNo\": \"\",\n" +
-                                                "    \"bicaccNo\": \"\"}")// @RequestBody
+                                        .content(testResponseBody)// @RequestBody
                                         .contentType(MediaType.APPLICATION_JSON)
                         )
                         // 輸出整個回應結果訊息
@@ -112,28 +115,31 @@ public class SenderTest {
 
         // Act (行為)
         // 取得 function 的實際回傳值
+
+        String testResponseBody="{\n" +
+                "    \"cmNo\": \"test\",\n" +
+                "    \"kacType\": \"1\",\n" +
+                "    \"bankNo\": \"123\",\n" +
+                "    \"ccy\": \"ttt\",\n" +
+                "    \"pvType\": \"1\",\n" +
+                "    \"bicaccNo\": \"test\",\n" +
+                "    \"acc\": [\n" +
+                "        {\n" +
+                "            \"test\": 20221018\n" +
+                "        }\n" +
+                "        ,\n" +
+                "        {\n" +
+                "            \"test\": 20221018\n" +
+                "        }\n" +
+                "    ],\n" +
+                "    \"itype\": \"\"\n" +
+                "}";
+
         ResultActions resultActions =
                 // perform(request) 為做一個請求的建立，get(url) 為 request 的連結
                 mockMvc.perform(
                                 MockMvcRequestBuilders.post("/api/v1/transfer/create")
-                                        .content("{\n" +
-                                                "    \"cmNo\": \"test\",\n" +
-                                                "    \"kacType\": \"1\",\n" +
-                                                "    \"bankNo\": \"123\",\n" +
-                                                "    \"ccy\": \"ttt\",\n" +
-                                                "    \"pvType\": \"1\",\n" +
-                                                "    \"bicaccNo\": \"test\",\n" +
-                                                "    \"acc\": [\n" +
-                                                "        {\n" +
-                                                "            \"test\": 20221018\n" +
-                                                "        }\n" +
-                                                "        ,\n" +
-                                                "        {\n" +
-                                                "            \"test\": 20221018\n" +
-                                                "        }\n" +
-                                                "    ],\n" +
-                                                "    \"itype\": \"\"\n" +
-                                                "}")// @RequestBody
+                                        .content(testResponseBody)// @RequestBody
                                         .contentType(MediaType.APPLICATION_JSON)
                         )
                         // 輸出整個回應結果訊息

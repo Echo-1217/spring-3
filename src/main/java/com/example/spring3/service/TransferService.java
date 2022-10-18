@@ -110,12 +110,10 @@ public class TransferService {
             return response;
         }
 
-//        MGNI mgni = mgniRepository.getMGNI(request.getId().toUpperCase());
 
         if (mgniRepository.findById(request.getId().toUpperCase()).isPresent()) {
             response.setMgni(mgniRepository.findById(request.getId().toUpperCase()).get());
-            mgniRepository.deleteById(request.getId().toUpperCase());
-//            cashiRepository.deleteByMgniId(request.getId().toUpperCase()); // cascadeType=All 所以不需要 delete cashi
+            mgniRepository.deleteById(request.getId().toUpperCase());// cascadeType=All 所以不需要 delete cashi
             response.setMessage("deleted success");
             return response;
         }
@@ -247,7 +245,8 @@ public class TransferService {
         cashi.setCcy(ccy);
         cashi.setAccNo(accNo);
         cashi.setAmt(amt.setScale(2, RoundingMode.HALF_UP));
-//        cashiRepository.save(cashi); // cascadeType=All 所以不需要 save cashi
+
+        // cascadeType=All 所以不需要 save cashi
         return cashi;
     }
 

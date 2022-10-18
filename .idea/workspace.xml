@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31557fae-7773-44ce-80a6-973fa093f2f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/controller/dto/response/TransferResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/controller/dto/response/TransferResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/controller/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/controller/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/model/MgniRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/model/MgniRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/service/TransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/service/TransferService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/spring3/controller/SenderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/spring3/controller/SenderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/spring3/service/TransferServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/spring3/service/TransferServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/response/TransferResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/response/TransferResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/Receiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/model/MgniRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/model/MgniRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/service/TransferService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/service/TransferService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/spring3/controller/SenderTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/spring3/controller/SenderTest$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/spring3/controller/SenderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/spring3/controller/SenderTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/spring3/service/TransferServiceTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.Spring3ApplicationTests.contextLoads">
+  <component name="RunManager" selected="JUnit.SenderTest">
     <configuration name="Spring3Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.spring3.Spring3Application" />
       <module name="spring-3" />
@@ -61,7 +64,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SenderTest.createTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SenderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-3" />
       <extension name="coverage">
         <pattern>
@@ -71,23 +74,54 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.spring3.controller" />
       <option name="MAIN_CLASS_NAME" value="com.example.spring3.controller.SenderTest" />
-      <option name="METHOD_NAME" value="createTransfer" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SenderTest.readTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.spring3.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.spring3.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.spring3.controller.SenderTest" />
+      <option name="METHOD_NAME" value="readTransfer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Spring3ApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UnitTestDemoServiceTest.privateFunctionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.spring3.*" />
+          <option name="PATTERN" value="com.example.spring3.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.spring3" />
-      <option name="MAIN_CLASS_NAME" value="com.example.spring3.Spring3ApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="PACKAGE_NAME" value="com.example.spring3.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.spring3.service.UnitTestDemoServiceTest" />
+      <option name="METHOD_NAME" value="privateFunctionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnitTestDemoServiceTest.staticFunctionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.spring3.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.spring3.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.spring3.service.UnitTestDemoServiceTest" />
+      <option name="METHOD_NAME" value="staticFunctionTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,9 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Spring3ApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.SenderTest" />
+        <item itemvalue="JUnit.UnitTestDemoServiceTest.staticFunctionTest" />
+        <item itemvalue="JUnit.UnitTestDemoServiceTest.privateFunctionTest" />
         <item itemvalue="Application.Spring3Application" />
-        <item itemvalue="JUnit.SenderTest.createTransfer" />
+        <item itemvalue="JUnit.SenderTest.readTransfer" />
       </list>
     </recent_temporary>
   </component>
@@ -125,5 +161,20 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/example/spring3/service/UnitTestDemoServiceTest.java</url>
+          <line>43</line>
+          <properties class="com.example.spring3.service.UnitTestDemoServiceTest" method="staticFunctionTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
