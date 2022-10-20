@@ -33,8 +33,6 @@ import java.util.List;
 @Service
 public class TransferService {
 
-    private final SimpleDateFormat sdFormat = new SimpleDateFormat("yyyyMMdd" + "HHmmssSSS");
-    private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
     @Autowired
     private CashiRepository cashiRepository;
     @Autowired
@@ -45,7 +43,7 @@ public class TransferService {
 
     public ReadResponse getAllTransfer() {
         ReadResponse response = new ReadResponse();
-        if(!receiver.getReceiveResponse()){
+        if (!receiver.getReceiveResponse()) {
             response.setMessage("未收到 queue");
             return response;
         }
@@ -58,7 +56,7 @@ public class TransferService {
 
         ReadResponse response = new ReadResponse();
 
-        if(!receiver.getReceiveResponse()){
+        if (!receiver.getReceiveResponse()) {
             response.setMessage("未收到 queue");
             return response;
         }
@@ -89,12 +87,12 @@ public class TransferService {
             }
             // order
             query.orderBy(builder.desc(root.get("time")));
-//            return builder.and(predicates.toArray(new Predicate[0]));
 
             // 由於介面定義  Predicate and(Predicate... var1);  其中 參數接收一個到多個 Predicate 物件
             // 故使用  Predicate[] p 來進行轉換
             Predicate[] p = new Predicate[predicates.size()];
             return builder.and(predicates.toArray(p));
+//            return builder.and(predicates.toArray(new Predicate[0]));
         };
         Pageable pageable = PageRequest.of(0, 5);
         Page<MGNI> mgniPage = mgniRepository.findAll(spec, pageable);
@@ -105,7 +103,7 @@ public class TransferService {
     public TransferResponse deleteTransfer(DeleteRequest request) {
         TransferResponse response = new TransferResponse();
 
-        if(!receiver.getReceiveResponse()){
+        if (!receiver.getReceiveResponse()) {
             response.setMessage("未收到 queue");
             return response;
         }
@@ -124,8 +122,9 @@ public class TransferService {
     @Transactional
     public TransferResponse createTransfer(CreateRequest createRequest) {
         TransferResponse response = new TransferResponse();
+        SimpleDateFormat sdFormat = new SimpleDateFormat("yyyyMMdd" + "HHmmssSSS");
 
-        if(!receiver.getReceiveResponse()){
+        if (!receiver.getReceiveResponse()) {
             response.setMessage("未收到 queue");
             return response;
         }
@@ -151,13 +150,14 @@ public class TransferService {
 
         TransferResponse response = new TransferResponse();
 
-        if(!receiver.getReceiveResponse()){
+        if (!receiver.getReceiveResponse()) {
             response.setMessage("未收到 queue");
             return response;
         }
 
         // delete the old cash detail
-        cashiRepository.deleteByMgniId(updateRequest.getId().toUpperCase());
+        cashiRepository.deleteByMGNI_ID(updateRequest.getId().toUpperCase());
+
         MGNI mgni = new MGNI();
 
         if (mgniRepository.findById(updateRequest.getId().toUpperCase()).isEmpty()) {
@@ -181,6 +181,7 @@ public class TransferService {
 
     private String setMGNI(MGNI mgni, CreateRequest createRequest, UpdateRequest updateRequest) {
         List<CASHI> cashList = new ArrayList<>();
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
         if (null != updateRequest) {
             if (updateRequest.getKacType().equals("2") && updateRequest.getAcc().size() > 1) {
@@ -232,7 +233,7 @@ public class TransferService {
         mgni.setUTime(dateTimeFormatter.format(LocalDateTime.now()));  // 異動時間
         mgni.setStatus("0");
         mgni.setCashiList(cashList);
-        cashiRepository.saveAll(cashList);
+
         mgniRepository.save(mgni);
         return "ok";
     }

@@ -3,6 +3,7 @@ package com.example.spring3.repository;
 import com.example.spring3.Spring3Application;
 import com.example.spring3.model.MgniRepository;
 import com.example.spring3.model.entity.MGNI;
+import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.junit.Test;
@@ -16,6 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 // 獲取啟動主程式、加載配置，確定啟用 Spring Boot
 @SpringBootTest(classes = Spring3Application.class)
+@Slf4j
 public class MgniRepositoryTest {
     @Autowired
     MgniRepository repository;

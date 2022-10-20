@@ -8,8 +8,7 @@ import com.example.spring3.controller.dto.response.ReadResponse;
 import com.example.spring3.controller.dto.response.TransferResponse;
 import com.example.spring3.service.TransferService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.validation.annotation.Validated;
@@ -21,17 +20,17 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping(path = "api/v1/transfer")
 @Validated
+@Slf4j
 public class Sender {
 
-    private final Logger logger = LogManager.getLogger(Sender.class);
     @Autowired
     private JmsTemplate jmsTemplate;
 
     @Autowired
-    private  Queue responseQueue;
+    private Queue responseQueue;
 
     @Autowired
-    private  Queue requestQueue;
+    private Queue requestQueue;
 
 
     @Autowired
@@ -42,6 +41,7 @@ public class Sender {
 
     @GetMapping("/find/All")
     public ReadResponse getAllTransfer() {
+        log.info("getAllTransfer()");
         ReadResponse response = new ReadResponse();
         try {
             // send request to queue
@@ -49,7 +49,7 @@ public class Sender {
 
             response = transferService.getAllTransfer();
             jmsTemplate.convertAndSend(responseQueue, mapper.writerWithDefaultPrettyPrinter().writeValueAsString(response));
-            logger.info(responseQueue);
+            log.info(String.valueOf(responseQueue));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -58,7 +58,7 @@ public class Sender {
 
     @GetMapping(path = "/find/Dynamic")
     public ReadResponse readTransfer(@Valid @RequestBody ReadRequest request) {
-        logger.info("readTransfer()");
+        log.info("readTransfer()");
         ReadResponse response = new ReadResponse();
         try {
             // send request to queue
@@ -75,6 +75,7 @@ public class Sender {
 
     @PostMapping("/create")
     public TransferResponse createTransfer(@Valid @RequestBody CreateRequest request) {
+        log.info("createTransfer()");
         TransferResponse response = new TransferResponse();
         try {
             // send request to queue
@@ -82,8 +83,8 @@ public class Sender {
 
             // send response
             response = transferService.createTransfer(request);
-            jmsTemplate.convertAndSend(this.responseQueue, mapper.writerWithDefaultPrettyPrinter().writeValueAsString(response));
-            logger.info(this.responseQueue);
+            jmsTemplate.convertAndSend(responseQueue, mapper.writerWithDefaultPrettyPrinter().writeValueAsString(response));
+            log.info(String.valueOf(responseQueue));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -92,7 +93,7 @@ public class Sender {
 
     @PostMapping("/update")
     public TransferResponse updateTransfer(@Valid @RequestBody UpdateRequest request) {
-        logger.info("updateTransfer()");
+        log.info("updateTransfer()");
         TransferResponse response = new TransferResponse();
         try {
             // send request to queue
@@ -101,6 +102,7 @@ public class Sender {
             // send response
             response = transferService.updateMGNI(request);
             jmsTemplate.convertAndSend(this.responseQueue, mapper.writerWithDefaultPrettyPrinter().writeValueAsString(response));
+            log.info(String.valueOf(responseQueue));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -109,7 +111,7 @@ public class Sender {
 
     @DeleteMapping("/delete")
     public TransferResponse deleteTransfer(@Valid @RequestBody DeleteRequest request) {
-        logger.info("deleteTransfer()");
+        log.info("deleteTransfer()");
         TransferResponse response = new TransferResponse();
         try {
             // send request to queue
@@ -118,6 +120,7 @@ public class Sender {
             // send response
             response = transferService.deleteTransfer(request);
             jmsTemplate.convertAndSend(this.responseQueue, mapper.writerWithDefaultPrettyPrinter().writeValueAsString(response));
+            log.info(String.valueOf(responseQueue));
         } catch (Exception e) {
             e.printStackTrace();
         }

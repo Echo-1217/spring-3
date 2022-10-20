@@ -9,7 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface CashiRepository extends JpaRepository<CASHI, CASHI.CASHIID> {
-    @Transactional
+
     @Modifying
-    void  deleteByMgniId(String id);
+    @Query(value = "DELETE FROM cashi WHERE mgni_id=?1",nativeQuery = true)
+    void deleteByMGNI_ID(String MGNI_ID);
 }

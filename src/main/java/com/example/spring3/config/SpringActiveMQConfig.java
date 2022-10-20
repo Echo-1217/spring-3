@@ -1,6 +1,7 @@
 package com.example.spring3.config;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.RedeliveryPolicy;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +15,6 @@ import javax.jms.Queue;
 public class SpringActiveMQConfig {
     private final String brokerUrl = "tcp://localhost:61616";
 
-    // 建立一個對列名稱為 send
     @Bean
     public Queue responseQueue() {
         return new ActiveMQQueue("response");
@@ -29,6 +29,16 @@ public class SpringActiveMQConfig {
     public ActiveMQConnectionFactory activeMQConnectionFactory() {
         ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
         activeMQConnectionFactory.setBrokerURL(brokerUrl);
+
+        //設定 Queue 的重發機制
+        RedeliveryPolicy queuePolicy = new RedeliveryPolicy();
+        queuePolicy.setInitialRedeliveryDelay(0); // 初始重發延遲時間
+        queuePolicy.setRedeliveryDelay(1000);//重發延遲時間
+        queuePolicy.setUseExponentialBackOff(false);
+        queuePolicy.setMaximumRedeliveries(2);// 最大重传次数
+
+        activeMQConnectionFactory.setRedeliveryPolicy(queuePolicy);
+
         return activeMQConnectionFactory;
     }
 

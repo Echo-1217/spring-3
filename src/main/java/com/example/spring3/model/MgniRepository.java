@@ -11,5 +11,4 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public interface MgniRepository extends JpaRepository<MGNI, String>, JpaSpecificationExecutor<MGNI> {
 
-
 }

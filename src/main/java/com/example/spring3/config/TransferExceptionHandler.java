@@ -11,6 +11,7 @@ import javax.validation.ConstraintViolationException;
 
 @RestControllerAdvice
 public class TransferExceptionHandler {
+
     //  最後一道防線
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handler(Exception e) {
@@ -28,12 +29,4 @@ public class TransferExceptionHandler {
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 
-//    // 捕捉 ConstraintViolationException
-//    @ExceptionHandler(ConstraintViolationException.class)
-//    public ResponseEntity<ErrorResponse> handler(ConstraintViolationException e) {
-//        e.printStackTrace();
-//        ErrorResponse error = new ErrorResponse(e);
-//
-//        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
-//    }
 }
