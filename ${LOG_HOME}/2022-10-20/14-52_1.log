@@ -1,0 +1,22 @@
+14:52:46.899 [background-preinit] INFO  Version -<clinit>   - HV000001: Hibernate Validator 6.2.5.Final
+
+14:52:46.990 [main] INFO  SenderTest -logStarting   - Starting SenderTest using Java 11.0.16 on 22005461EchoLin with PID 13772 (started by 2200546 in C:\Git Repo\spring-3)
+
+14:52:47.004 [main] INFO  SenderTest -logStartupProfileInfo   - No active profile set, falling back to 1 default profile: "default"
+
+14:52:49.275 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+
+14:52:49.546 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Finished Spring Data repository scanning in 240 ms. Found 2 JPA repository interfaces.
+
+14:52:57.093 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Starting...
+
+14:52:57.409 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Start completed.
+
+14:52:57.618 [main] INFO  LogHelper -logPersistenceUnitInformation   - HHH000204: Processing PersistenceUnitInfo [name: default]
+
+14:52:57.873 [main] INFO  Version -logVersion   - HHH000412: Hibernate ORM core version 5.6.11.Final
+
+14:52:58.024 [main] INFO  Version -<clinit>   - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+
+14:52:58.530 [main] INFO  Dialect -<init>   - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+

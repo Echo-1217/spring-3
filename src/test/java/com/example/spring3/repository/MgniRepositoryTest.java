@@ -40,6 +40,8 @@ public class MgniRepositoryTest {
 
         // AssertJ 寫法
         Assertions.assertThat(actual.getId()).isEqualTo(expected);
+
+
     }
 
 }

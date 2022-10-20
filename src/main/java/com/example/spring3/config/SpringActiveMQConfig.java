@@ -14,7 +14,7 @@ import javax.jms.Queue;
 @EnableJms
 public class SpringActiveMQConfig {
     private final String brokerUrl = "tcp://localhost:61616";
-
+    // bean 讓 其他class 可以用 autowired
     @Bean
     public Queue responseQueue() {
         return new ActiveMQQueue("response");

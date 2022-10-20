@@ -1,0 +1,58 @@
+14:39:13.983 [SpringApplicationShutdownHook] INFO  LocalContainerEntityManagerFactoryBean -destroy   - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+14:39:13.996 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown initiated...
+
+14:39:14.001 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown completed.
+
+14:39:18.670 [background-preinit] INFO  Version -<clinit>   - HV000001: Hibernate Validator 6.2.5.Final
+
+14:39:18.695 [main] INFO  Spring3Application -logStarting   - Starting Spring3Application using Java 11.0.16 on 22005461EchoLin with PID 2656 (C:\Git Repo\spring-3\target\classes started by 2200546 in C:\Git Repo\spring-3)
+
+14:39:18.699 [main] INFO  Spring3Application -logStartupProfileInfo   - No active profile set, falling back to 1 default profile: "default"
+
+14:39:19.301 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+
+14:39:19.362 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+
+14:39:20.224 [main] INFO  TomcatWebServer -initialize   - Tomcat initialized with port(s): 8080 (http)
+
+14:39:20.237 [main] INFO  Http11NioProtocol -log   - Initializing ProtocolHandler ["http-nio-8080"]
+
+14:39:20.238 [main] INFO  StandardService -log   - Starting service [Tomcat]
+
+14:39:20.238 [main] INFO  StandardEngine -log   - Starting Servlet engine: [Apache Tomcat/9.0.65]
+
+14:39:20.383 [main] INFO  [/] -log   - Initializing Spring embedded WebApplicationContext
+
+14:39:20.383 [main] INFO  ServletWebServerApplicationContext -prepareWebApplicationContext   - Root WebApplicationContext: initialization completed in 1653 ms
+
+14:39:20.518 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Starting...
+
+14:39:20.590 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Start completed.
+
+14:39:20.648 [main] INFO  LogHelper -logPersistenceUnitInformation   - HHH000204: Processing PersistenceUnitInfo [name: default]
+
+14:39:20.700 [main] INFO  Version -logVersion   - HHH000412: Hibernate ORM core version 5.6.11.Final
+
+14:39:20.870 [main] INFO  Version -<clinit>   - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+
+14:39:20.967 [main] INFO  Dialect -<init>   - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+
+14:39:21.555 [main] INFO  JtaPlatformInitiator -initiateService   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+
+14:39:21.561 [main] INFO  LocalContainerEntityManagerFactoryBean -buildNativeEntityManagerFactory   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+
+14:39:22.105 [main] WARN  JpaBaseConfiguration$JpaWebConfiguration -openEntityManagerInViewInterceptor   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+
+14:39:22.459 [main] INFO  Http11NioProtocol -log   - Starting ProtocolHandler ["http-nio-8080"]
+
+14:39:22.484 [main] INFO  TomcatWebServer -start   - Tomcat started on port(s): 8080 (http) with context path ''
+
+14:39:22.674 [main] INFO  Spring3Application -logStarted   - Started Spring3Application in 4.329 seconds (JVM running for 5.497)
+
+14:40:13.486 [SpringApplicationShutdownHook] INFO  LocalContainerEntityManagerFactoryBean -destroy   - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+14:40:13.493 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown initiated...
+
+14:40:13.498 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown completed.
+

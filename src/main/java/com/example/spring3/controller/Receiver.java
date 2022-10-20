@@ -20,7 +20,7 @@ public class Receiver {
         log.info("Message received from response queue---\n" + message);
     }
 
-    @JmsListener(destination = "request")
+    @JmsListener(destination = "request") // listener = blocker = 非同步
     public void receiveFromRequest(String message) {
         log.info("Message received from {} queue---\n", message);
 

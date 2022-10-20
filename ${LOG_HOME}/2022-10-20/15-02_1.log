@@ -1,0 +1,46 @@
+15:02:09.727 [background-preinit] INFO  Version -<clinit>   - HV000001: Hibernate Validator 6.2.5.Final
+
+15:02:09.778 [main] INFO  Spring3Application -logStarting   - Starting Spring3Application using Java 11.0.16 on 22005461EchoLin with PID 8504 (C:\Git Repo\spring-3\target\classes started by 2200546 in C:\Git Repo\spring-3)
+
+15:02:09.784 [main] INFO  Spring3Application -logStartupProfileInfo   - No active profile set, falling back to 1 default profile: "default"
+
+15:02:10.948 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+
+15:02:11.043 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Finished Spring Data repository scanning in 82 ms. Found 2 JPA repository interfaces.
+
+15:02:12.795 [main] INFO  TomcatWebServer -initialize   - Tomcat initialized with port(s): 8080 (http)
+
+15:02:12.812 [main] INFO  Http11NioProtocol -log   - Initializing ProtocolHandler ["http-nio-8080"]
+
+15:02:12.813 [main] INFO  StandardService -log   - Starting service [Tomcat]
+
+15:02:12.813 [main] INFO  StandardEngine -log   - Starting Servlet engine: [Apache Tomcat/9.0.65]
+
+15:02:13.069 [main] INFO  [/] -log   - Initializing Spring embedded WebApplicationContext
+
+15:02:13.072 [main] INFO  ServletWebServerApplicationContext -prepareWebApplicationContext   - Root WebApplicationContext: initialization completed in 3224 ms
+
+15:02:13.269 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Starting...
+
+15:02:13.421 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Start completed.
+
+15:02:13.506 [main] INFO  LogHelper -logPersistenceUnitInformation   - HHH000204: Processing PersistenceUnitInfo [name: default]
+
+15:02:13.584 [main] INFO  Version -logVersion   - HHH000412: Hibernate ORM core version 5.6.11.Final
+
+15:02:13.867 [main] INFO  Version -<clinit>   - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+
+15:02:14.047 [main] INFO  Dialect -<init>   - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+
+15:02:15.050 [main] INFO  JtaPlatformInitiator -initiateService   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+
+15:02:15.062 [main] INFO  LocalContainerEntityManagerFactoryBean -buildNativeEntityManagerFactory   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+
+15:02:15.887 [main] WARN  JpaBaseConfiguration$JpaWebConfiguration -openEntityManagerInViewInterceptor   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+
+15:02:16.370 [main] INFO  Http11NioProtocol -log   - Starting ProtocolHandler ["http-nio-8080"]
+
+15:02:16.403 [main] INFO  TomcatWebServer -start   - Tomcat started on port(s): 8080 (http) with context path ''
+
+15:02:16.639 [main] INFO  Spring3Application -logStarted   - Started Spring3Application in 7.485 seconds (JVM running for 9.362)
+

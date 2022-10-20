@@ -1,0 +1,68 @@
+14:35:30.984 [background-preinit] INFO  Version -<clinit>   - HV000001: Hibernate Validator 6.2.5.Final
+
+14:35:31.025 [main] INFO  Spring3Application -logStarting   - Starting Spring3Application using Java 11.0.16 on 22005461EchoLin with PID 17536 (C:\Git Repo\spring-3\target\classes started by 2200546 in C:\Git Repo\spring-3)
+
+14:35:31.029 [main] INFO  Spring3Application -logStartupProfileInfo   - No active profile set, falling back to 1 default profile: "default"
+
+14:35:31.790 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+
+14:35:31.845 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+
+14:35:32.889 [main] INFO  TomcatWebServer -initialize   - Tomcat initialized with port(s): 8080 (http)
+
+14:35:32.903 [main] INFO  Http11NioProtocol -log   - Initializing ProtocolHandler ["http-nio-8080"]
+
+14:35:32.904 [main] INFO  StandardService -log   - Starting service [Tomcat]
+
+14:35:32.904 [main] INFO  StandardEngine -log   - Starting Servlet engine: [Apache Tomcat/9.0.65]
+
+14:35:33.048 [main] INFO  [/] -log   - Initializing Spring embedded WebApplicationContext
+
+14:35:33.049 [main] INFO  ServletWebServerApplicationContext -prepareWebApplicationContext   - Root WebApplicationContext: initialization completed in 1984 ms
+
+14:35:33.170 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Starting...
+
+14:35:33.221 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Start completed.
+
+14:35:33.272 [main] INFO  LogHelper -logPersistenceUnitInformation   - HHH000204: Processing PersistenceUnitInfo [name: default]
+
+14:35:33.310 [main] INFO  Version -logVersion   - HHH000412: Hibernate ORM core version 5.6.11.Final
+
+14:35:33.464 [main] INFO  Version -<clinit>   - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+
+14:35:33.580 [main] INFO  Dialect -<init>   - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+
+14:35:34.264 [main] INFO  JtaPlatformInitiator -initiateService   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+
+14:35:34.272 [main] INFO  LocalContainerEntityManagerFactoryBean -buildNativeEntityManagerFactory   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+
+14:35:34.767 [main] WARN  JpaBaseConfiguration$JpaWebConfiguration -openEntityManagerInViewInterceptor   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+
+14:35:35.080 [main] INFO  Http11NioProtocol -log   - Starting ProtocolHandler ["http-nio-8080"]
+
+14:35:35.101 [main] INFO  TomcatWebServer -start   - Tomcat started on port(s): 8080 (http) with context path ''
+
+14:35:35.293 [main] INFO  Spring3Application -logStarted   - Started Spring3Application in 4.629 seconds (JVM running for 5.768)
+
+14:35:40.617 [http-nio-8080-exec-1] INFO  [/] -log   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+14:35:40.617 [http-nio-8080-exec-1] INFO  DispatcherServlet -initServletBean   - Initializing Servlet 'dispatcherServlet'
+
+14:35:40.618 [http-nio-8080-exec-1] INFO  DispatcherServlet -initServletBean   - Completed initialization in 1 ms
+
+14:35:40.755 [http-nio-8080-exec-1] INFO  Sender -deleteTransfer   - deleteTransfer()
+
+14:35:40.777 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - Message received from request	[/delete] queue---
+
+
+14:35:40.778 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - request	[/delete] : processing....
+
+
+14:35:40.846 [org.springframework.jms.JmsListenerEndpointContainer#0-1] INFO  Receiver -receiveFromResponse   - Message received from response queue---
+{
+  "mgni" : null,
+  "message" : "查無結果"
+}
+
+14:35:40.850 [http-nio-8080-exec-1] INFO  Sender -deleteTransfer   - queue://response
+

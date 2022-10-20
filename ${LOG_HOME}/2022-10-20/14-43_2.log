@@ -1,0 +1,36 @@
+14:43:20.315 [background-preinit] INFO  Version -<clinit>   - HV000001: Hibernate Validator 6.2.5.Final
+
+14:43:20.394 [main] INFO  MgniRepositoryTest -logStarting   - Starting MgniRepositoryTest using Java 11.0.16 on 22005461EchoLin with PID 15212 (started by 2200546 in C:\Git Repo\spring-3)
+
+14:43:20.413 [main] INFO  MgniRepositoryTest -logStartupProfileInfo   - No active profile set, falling back to 1 default profile: "default"
+
+14:43:22.791 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+
+14:43:23.094 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Finished Spring Data repository scanning in 255 ms. Found 2 JPA repository interfaces.
+
+14:43:25.077 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Starting...
+
+14:43:25.377 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Start completed.
+
+14:43:25.553 [main] INFO  LogHelper -logPersistenceUnitInformation   - HHH000204: Processing PersistenceUnitInfo [name: default]
+
+14:43:25.795 [main] INFO  Version -logVersion   - HHH000412: Hibernate ORM core version 5.6.11.Final
+
+14:43:26.403 [main] INFO  Version -<clinit>   - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+
+14:43:28.187 [main] INFO  Dialect -<init>   - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+
+14:43:30.430 [main] INFO  JtaPlatformInitiator -initiateService   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+
+14:43:30.463 [main] INFO  LocalContainerEntityManagerFactoryBean -buildNativeEntityManagerFactory   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+
+14:43:33.225 [main] WARN  JpaBaseConfiguration$JpaWebConfiguration -openEntityManagerInViewInterceptor   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+
+14:43:35.551 [main] INFO  MgniRepositoryTest -logStarted   - Started MgniRepositoryTest in 16.356 seconds (JVM running for 21.708)
+
+14:43:39.681 [SpringApplicationShutdownHook] INFO  LocalContainerEntityManagerFactoryBean -destroy   - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+14:43:39.688 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown initiated...
+
+14:43:39.713 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown completed.
+

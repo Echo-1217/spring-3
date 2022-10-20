@@ -46,7 +46,6 @@ public class Sender {
         try {
             // send request to queue
             jmsTemplate.convertAndSend(requestQueue, requestQueue.getQueueName() + "\t[/find/All]");
-
             response = transferService.getAllTransfer();
             jmsTemplate.convertAndSend(responseQueue, mapper.writerWithDefaultPrettyPrinter().writeValueAsString(response));
             log.info(String.valueOf(responseQueue));

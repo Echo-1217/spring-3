@@ -5,42 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31557fae-7773-44ce-80a6-973fa093f2f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/${LOG_HOME}/2022-10-20/14-23_1.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/${LOG_HOME}/2022-10-20/14-28_1.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/${LOG_HOME}/2022-10-20/14-30_1.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/${LOG_HOME}/2022-10-20/14-30_2.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/${LOG_HOME}/2022-10-20/14-32_1.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/${LOG_HOME}/2022-10-20/14-32_2.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/${LOG_HOME}/2022-10-20/14-33_1.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/${LOG_HOME}/2022-10-20/14-34_1.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/${LOG_HOME}/rollF.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/config/SpringActiveMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/config/SpringActiveMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/config/TransferExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/config/TransferExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/controller/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/controller/Receiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/controller/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/controller/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/model/CashiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/model/CashiRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/model/MgniRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/model/MgniRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/service/TransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring3/service/TransferService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring3/service/UnitTestDemoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/spring3/controller/SenderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/spring3/controller/SenderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/spring3/repository/MgniRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/spring3/repository/MgniRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/Spring3Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/Spring3Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/config/SpringActiveMQConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/config/SpringActiveMQConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/config/TransferExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/config/TransferExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/Receiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/Sender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/request/CreateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/request/CreateRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/request/DeleteRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/request/DeleteRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/request/ReadRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/request/ReadRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/request/UpdateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/request/UpdateRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/response/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/response/ErrorResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/response/ReadResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/response/ReadResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/response/TransferResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/controller/dto/response/TransferResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/model/CashiRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/model/CashiRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/model/MgniRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/model/MgniRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/model/entity/CASHI$CASHIID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/model/entity/CASHI$CASHIID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/model/entity/CASHI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/model/entity/CASHI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/model/entity/MGNI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/model/entity/MGNI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/service/TransferService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/service/TransferService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/service/UnitTestDemoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spring3/service/UnitTestDemoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/spring3/Spring3ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/spring3/Spring3ApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/spring3/service/UnitTestDemoServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spring3/service/UnitTestDemoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/spring3/controller/SenderTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/spring3/controller/SenderTest$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/spring3/controller/SenderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/spring3/controller/SenderTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/spring3/repository/MgniRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/spring3/repository/MgniRepositoryTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/spring3/service/UnitTestDemoServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/spring3/service/UnitTestDemoServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/spring3/service/UnitTestDemoServiceTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +79,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Spring3Application">
+  <component name="RunManager" selected="JUnit.MgniRepositoryTest.getMGNITest">
     <configuration name="Spring3Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.spring3.Spring3Application" />
       <module name="spring-3" />
@@ -101,6 +89,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MgniRepositoryTest.getMGNITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.spring3.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.spring3.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.spring3.repository.MgniRepositoryTest" />
+      <option name="METHOD_NAME" value="getMGNITest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,7 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SenderTest.readTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SenderTest.createTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-3" />
       <extension name="coverage">
         <pattern>
@@ -130,23 +134,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.spring3.controller" />
       <option name="MAIN_CLASS_NAME" value="com.example.spring3.controller.SenderTest" />
-      <option name="METHOD_NAME" value="readTransfer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UnitTestDemoServiceTest.privateFunctionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.spring3.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.spring3.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.spring3.service.UnitTestDemoServiceTest" />
-      <option name="METHOD_NAME" value="privateFunctionTest" />
+      <option name="METHOD_NAME" value="createTransfer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MgniRepositoryTest.getMGNITest" />
         <item itemvalue="Application.Spring3Application" />
         <item itemvalue="JUnit.SenderTest" />
+        <item itemvalue="JUnit.SenderTest.createTransfer" />
         <item itemvalue="JUnit.UnitTestDemoServiceTest.staticFunctionTest" />
-        <item itemvalue="JUnit.UnitTestDemoServiceTest.privateFunctionTest" />
-        <item itemvalue="JUnit.SenderTest.readTransfer" />
       </list>
     </recent_temporary>
   </component>

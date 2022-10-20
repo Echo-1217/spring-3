@@ -1,0 +1,39 @@
+deleteTransfer()
+Message received from request	[/delete] queue---
+
+request	[/delete] : processing....
+
+Message received from response queue---
+{
+  "mgni" : {
+    "id" : "MGI20221018153810804",
+    "time" : "2022-10-18 15:38:10",
+    "type" : "1",
+    "cmNo" : "F62S",
+    "kacType" : "1",
+    "bankNo" : "999",
+    "ccy" : "TWD",
+    "pvType" : "1",
+    "bicaccNo" : "1234567",
+    "amt" : 20221683.0000,
+    "ctName" : "Echo",
+    "ctTel" : "0958952199",
+    "status" : "0",
+    "cashiList" : [ {
+      "mgniId" : "MGI20221018153810804",
+      "accNo" : "01",
+      "ccy" : "TWD",
+      "amt" : 666.0000
+    }, {
+      "mgniId" : "MGI20221018153810804",
+      "accNo" : "02",
+      "ccy" : "TWD",
+      "amt" : 20221017.0000
+    } ],
+    "itype" : "1",
+    "preason" : "test jdbc",
+    "utime" : "2022-10-18 15:38:10"
+  },
+  "message" : "deleted success"
+}
+queue://response

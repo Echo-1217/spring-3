@@ -5,9 +5,9 @@ import com.example.spring3.controller.dto.response.ReadResponse;
 import com.example.spring3.controller.dto.response.TransferResponse;
 import com.example.spring3.model.entity.MGNI;
 import com.example.spring3.service.TransferService;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,8 +22,6 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import java.util.List;
-
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -34,7 +32,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 // 獲取啟動主程式、加載配置，確定啟用 Spring Boot
 @SpringBootTest(classes = Spring3Application.class)
+@Slf4j
 public class SenderTest {
+
     // 測試 sender 需要建立假的 MVC 環境
     private MockMvc mockMvc;
 
@@ -43,7 +43,6 @@ public class SenderTest {
 
     // 使用 MockBean 製作假元件
     @MockBean
-//    @Autowired
     private TransferService service;
 
     // before 的 function 會在一開始比 Test 先執行
@@ -66,19 +65,20 @@ public class SenderTest {
         expected.setMgniList(om.readValue(strResponse, new TypeReference<>() {
         }));
 
-
-        // mocking
+        // mocking 給前端一個假資料 (假設已經有可以運作的service)
         when(this.service.readTransfer(any())).thenReturn(expected);
 
         // 將 object 轉為 JSON 的格式
         String expectedStr = om.writeValueAsString(expected);
 
         // Act (行為)
-
-        String testResponseBody="{\"id\":\"\",\n" +
+        // 定義 response body 格式
+        // 資料不重要 因為會直接 new 一個假的物件 與回傳資料 重要的是格式是否有符合 validation
+        String testResponseBody = "{\"id\":\"\",\n" +
                 "    \"cmNo\": \"\",\n" +
                 "    \"bicaccNo\": \"\"}";
         // 取得 function 的實際回傳值
+        // interface ResultActions implement
         ResultActions resultActions =
                 // perform(request) 為做一個請求的建立，get(url) 為 request 的連結
                 mockMvc.perform(
@@ -91,8 +91,8 @@ public class SenderTest {
                         .andExpect(status().isOk());
         // 取得回傳物件
         String actual = resultActions.andReturn().getResponse().getContentAsString();
-        System.out.println("expectedStr\n" + expectedStr + "\n");
-        System.out.println("actual: \n" + actual);
+        log.info("expectedStr:\n"+expectedStr);
+        log.info("actual:\n"+actual);
 
         // Assert (驗證結果)
         Assert.assertEquals(expectedStr, actual);
@@ -105,7 +105,7 @@ public class SenderTest {
         ObjectMapper om = new ObjectMapper();
 
         TransferResponse expected = new TransferResponse();
-        expected.setMgni(om.readValue(strResponse,MGNI.class));
+        expected.setMgni(om.readValue(strResponse, MGNI.class));
         expected.setMessage("test Junit");
         // mocking
         when(this.service.createTransfer(any())).thenReturn(expected);
@@ -113,28 +113,30 @@ public class SenderTest {
         // 將 object 轉為 JSON 的格式
         String expectedStr = om.writeValueAsString(expected);
 
-        // Act (行為)
-        // 取得 function 的實際回傳值
-
-        String testResponseBody="{\n" +
+        // 定義 response body 格式
+        // 資料不重要 因為會直接 new 一個假的物件 與回傳資料 重要的是格式是否有符合 validation
+        String testResponseBody = "{\n" +
                 "    \"cmNo\": \"test\",\n" +
-                "    \"kacType\": \"1\",\n" +
-                "    \"bankNo\": \"123\",\n" +
-                "    \"ccy\": \"ttt\",\n" +
+                "    \"kacType\": \"0\",\n" +
+                "    \"bankNo\": \"000\",\n" +
+                "    \"ccy\": \"xxx\",\n" +
                 "    \"pvType\": \"1\",\n" +
                 "    \"bicaccNo\": \"test\",\n" +
                 "    \"acc\": [\n" +
                 "        {\n" +
-                "            \"test\": 20221018\n" +
+                "            \"test\": 0\n" +
                 "        }\n" +
                 "        ,\n" +
                 "        {\n" +
-                "            \"test\": 20221018\n" +
+                "            \"test\": 0\n" +
                 "        }\n" +
                 "    ],\n" +
                 "    \"itype\": \"\"\n" +
                 "}";
 
+        // Act (行為)
+        // 取得 function 的實際回傳值
+        // interface ResultActions implement
         ResultActions resultActions =
                 // perform(request) 為做一個請求的建立，get(url) 為 request 的連結
                 mockMvc.perform(
@@ -147,8 +149,9 @@ public class SenderTest {
                         .andExpect(status().isOk());
         // 取得回傳物件
         String actual = resultActions.andReturn().getResponse().getContentAsString();
-        System.out.println("expectedStr\n" + expectedStr + "\n");
-        System.out.println("actual: \n" + actual);
+
+        log.info("expectedStr:\n"+expectedStr);
+        log.info("actual:\n"+actual);
 
         // Assert (驗證結果)
         Assert.assertEquals(expectedStr, actual);
