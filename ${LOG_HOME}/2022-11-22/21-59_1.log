@@ -1,0 +1,22 @@
+21:59:08.999 [http-nio-8080-exec-9] INFO  Sender -updateTransfer   - updateTransfer()
+
+21:59:09.010 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - Message received from request	[/update] queue---
+
+
+21:59:09.010 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - request	[/update] : processing....
+
+
+21:59:09.022 [http-nio-8080-exec-9] WARN  ErrorPacket -warn   - Error: 1048-23000: Column 'mgni_id' cannot be null
+
+21:59:09.023 [http-nio-8080-exec-9] WARN  SqlExceptionHelper -logExceptions   - SQL Error: 1048, SQLState: 23000
+
+21:59:09.023 [http-nio-8080-exec-9] ERROR SqlExceptionHelper -logExceptions   - (conn=53) Column 'mgni_id' cannot be null
+
+21:59:09.023 [http-nio-8080-exec-9] INFO  AbstractBatchImpl -release   - HHH000010: On release of batch it still contained JDBC statements
+
+21:59:59.605 [SpringApplicationShutdownHook] INFO  LocalContainerEntityManagerFactoryBean -destroy   - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+21:59:59.607 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown initiated...
+
+21:59:59.611 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown completed.
+

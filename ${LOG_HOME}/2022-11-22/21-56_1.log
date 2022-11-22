@@ -1,0 +1,16 @@
+21:56:24.461 [http-nio-8080-exec-5] INFO  Sender -readTransfer   - readTransfer()
+
+21:56:24.469 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - Message received from request	[/find/Dynamic] queue---
+
+
+21:56:24.469 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - request	[/find/Dynamic] : processing....
+
+
+21:56:42.049 [http-nio-8080-exec-6] INFO  Sender -readTransfer   - readTransfer()
+
+21:56:42.056 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - Message received from request	[/find/Dynamic] queue---
+
+
+21:56:42.056 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - request	[/find/Dynamic] : processing....
+
+

@@ -17,32 +17,35 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "cashi")
-@IdClass(CASHI.CASHIID.class)
+//@IdClass(CASHI.CASHIID.class)
 @XmlAccessorType(XmlAccessType.FIELD)
-//@JsonIgnoreProperties(value= {"id"})
-public class CASHI implements Serializable {
-    private static final Long serialVersionUID = 1L;
+//@JsonIgnoreProperties(value= {"id"}) implements Serializable
+public class CASHI  {
+//    private static final Long serialVersionUID = 1L;
 
-    @Id
-    @Column(name = "mgni_id")
-    private String mgniId;
+    @ManyToOne(optional = false, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "mgni_id",referencedColumnName = "ID")
+    private MGNI mgni;
+//    @Id
+//    @Column(name = "mgni_id")
+//    private String mgniId;
     @Id
     @Column(name = "acc_no")
     private String accNo;
-    @Id
+//    @Id
     @Column
     private String ccy;
     @Column
     private BigDecimal amt;
 
-    
-    @Data
-    public static class CASHIID implements Serializable {
-        private static final Long serialVersionUID = 1L;
-
-        private String mgniId;
-        private String accNo;
-        private String ccy;
-    }
+//
+//    @Data
+//    public static class CASHIID implements Serializable {
+//        private static final Long serialVersionUID = 1L;
+//
+////        private String mgniId;
+//        private String accNo;
+//        private String ccy;
+//    }
 
 }

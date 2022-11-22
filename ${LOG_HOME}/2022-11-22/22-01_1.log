@@ -1,0 +1,8 @@
+22:01:53.277 [http-nio-8080-exec-1] WARN  ErrorPacket -warn   - Error: 1048-23000: Column 'mgni_id' cannot be null
+
+22:01:53.281 [http-nio-8080-exec-1] WARN  SqlExceptionHelper -logExceptions   - SQL Error: 1048, SQLState: 23000
+
+22:01:53.281 [http-nio-8080-exec-1] ERROR SqlExceptionHelper -logExceptions   - (conn=64) Column 'mgni_id' cannot be null
+
+22:01:53.282 [http-nio-8080-exec-1] INFO  AbstractBatchImpl -release   - HHH000010: On release of batch it still contained JDBC statements
+

@@ -1,0 +1,44 @@
+21:55:00.706 [http-nio-8080-exec-2] INFO  [/] -log   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+21:55:00.708 [http-nio-8080-exec-2] INFO  DispatcherServlet -initServletBean   - Initializing Servlet 'dispatcherServlet'
+
+21:55:00.710 [http-nio-8080-exec-2] INFO  DispatcherServlet -initServletBean   - Completed initialization in 2 ms
+
+21:55:00.856 [http-nio-8080-exec-2] INFO  Sender -updateTransfer   - updateTransfer()
+
+21:55:00.874 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - Message received from request	[/update] queue---
+
+
+21:55:00.874 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - request	[/update] : processing....
+
+
+21:55:01.023 [http-nio-8080-exec-2] WARN  ErrorPacket -warn   - Error: 1048-23000: Column 'mgni_id' cannot be null
+
+21:55:01.024 [http-nio-8080-exec-2] WARN  SqlExceptionHelper -logExceptions   - SQL Error: 1048, SQLState: 23000
+
+21:55:01.024 [http-nio-8080-exec-2] ERROR SqlExceptionHelper -logExceptions   - (conn=53) Column 'mgni_id' cannot be null
+
+21:55:01.024 [http-nio-8080-exec-2] INFO  AbstractBatchImpl -release   - HHH000010: On release of batch it still contained JDBC statements
+
+21:55:51.192 [http-nio-8080-exec-3] INFO  Sender -getAllTransfer   - getAllTransfer()
+
+21:55:51.199 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - Message received from request	[/find/All] queue---
+
+
+21:55:51.199 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - request	[/find/All] : processing....
+
+
+21:55:58.180 [http-nio-8080-exec-4] INFO  Sender -readTransfer   - readTransfer()
+
+21:55:58.187 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - Message received from request	[/find/Dynamic] queue---
+
+
+21:55:58.187 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - request	[/find/Dynamic] : processing....
+
+
+21:55:58.222 [org.springframework.jms.JmsListenerEndpointContainer#0-1] INFO  Receiver -receiveFromResponse   - Message received from response queue---
+{
+  "mgniList" : null,
+  "message" : "查無結果"
+}
+

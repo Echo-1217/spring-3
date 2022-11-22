@@ -1,0 +1,6 @@
+22:08:33.860 [SpringApplicationShutdownHook] INFO  LocalContainerEntityManagerFactoryBean -destroy   - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+22:08:33.864 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown initiated...
+
+22:08:33.867 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown completed.
+

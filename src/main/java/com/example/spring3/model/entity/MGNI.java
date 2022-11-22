@@ -55,12 +55,15 @@ public class MGNI implements Serializable {
     private String status;
     @Column(name = "u_time")
     private String uTime;
-
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "mgniId", cascade = CascadeType.ALL)
     //  FetchType.EAGER表示一併載入所有屬性所對應的資料
     //  mappedBy CASHI 合併的變數名稱
     //  CascadeType.ALL 無論儲存、合併、 更新或移除，一併對被參考物件作出對應動作。
+
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "mgni", cascade = CascadeType.ALL)
+//    @JoinColumn(name = "mgni_id",referencedColumnName = "id")
     private List<CASHI> cashiList;
+
+
+
 }
 

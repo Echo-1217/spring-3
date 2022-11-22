@@ -1,0 +1,177 @@
+21:41:00.852 [http-nio-8080-exec-4] INFO  Sender -getAllTransfer   - getAllTransfer()
+
+21:41:00.864 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - Message received from request	[/find/All] queue---
+
+
+21:41:00.864 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - request	[/find/All] : processing....
+
+
+21:41:01.002 [org.springframework.jms.JmsListenerEndpointContainer#0-1] INFO  Receiver -receiveFromResponse   - Message received from response queue---
+{
+  "mgniList" : [ {
+    "id" : "MGI20221016152205196",
+    "time" : "2022-10-16 15:22:05",
+    "type" : "1",
+    "cmNo" : "MQ",
+    "kacType" : "1",
+    "bankNo" : "123",
+    "ccy" : "TWD",
+    "pvType" : "1",
+    "bicaccNo" : "2200546",
+    "amt" : 20222461.0000,
+    "ctName" : "Echo",
+    "ctTel" : "0987654321",
+    "status" : "0",
+    "cashiList" : [ {
+      "mgniId" : "MGI20221016152205196",
+      "accNo" : "002",
+      "ccy" : "TWD",
+      "amt" : 20221016.0000
+    }, {
+      "mgniId" : "MGI20221016152205196",
+      "accNo" : "01",
+      "ccy" : "TWD",
+      "amt" : 1445.0000
+    } ],
+    "preason" : "test",
+    "itype" : "",
+    "utime" : "2022-10-16 15:22:05"
+  }, {
+    "id" : "MGI20221016154238551",
+    "time" : "2022-10-16 15:42:38",
+    "type" : "1",
+    "cmNo" : "MQ",
+    "kacType" : "1",
+    "bankNo" : "123",
+    "ccy" : "TWD",
+    "pvType" : "1",
+    "bicaccNo" : "2200546",
+    "amt" : 20222461.0000,
+    "ctName" : "Echo",
+    "ctTel" : "0987654321",
+    "status" : "0",
+    "cashiList" : [ {
+      "mgniId" : "MGI20221016154238551",
+      "accNo" : "002",
+      "ccy" : "TWD",
+      "amt" : 20221016.0000
+    }, {
+      "mgniId" : "MGI20221016154238551",
+      "accNo" : "01",
+      "ccy" : "TWD",
+      "amt" : 1445.0000
+    } ],
+    "preason" : "test",
+    "itype" : "",
+    "utime" : "2022-10-16 15:42:38"
+  }, {
+    "id" : "MGI20221016162721450",
+    "time" : "2022-10-16 16:27:21",
+    "type" : "1",
+    "cmNo" : "MQ",
+    "kacType" : "1",
+    "bankNo" : "123",
+    "ccy" : "TWD",
+    "pvType" : "1",
+    "bicaccNo" : "2200546",
+    "amt" : 20222461.0000,
+    "ctName" : "Echo",
+    "ctTel" : "0987654321",
+    "status" : "0",
+    "cashiList" : [ {
+      "mgniId" : "MGI20221016162721450",
+      "accNo" : "002",
+      "ccy" : "TWD",
+      "amt" : 20221016.0000
+    }, {
+      "mgniId" : "MGI20221016162721450",
+      "accNo" : "01",
+      "ccy" : "TWD",
+      "amt" : 1445.0000
+    } ],
+    "preason" : "test",
+    "itype" : "",
+    "utime" : "2022-10-16 16:27:21"
+  }, {
+    "id" : "MGI20221122214049873",
+    "time" : "2022-11-22 21:40:49",
+    "type" : "1",
+    "cmNo" : "MQ",
+    "kacType" : "1",
+    "bankNo" : "123",
+    "ccy" : "TWD",
+    "pvType" : "1",
+    "bicaccNo" : "2200546",
+    "amt" : 20222461.0000,
+    "ctName" : "Echo",
+    "ctTel" : "0987654321",
+    "status" : "0",
+    "cashiList" : [ {
+      "mgniId" : "MGI20221122214049873",
+      "accNo" : "002",
+      "ccy" : "TWD",
+      "amt" : 20221016.0000
+    }, {
+      "mgniId" : "MGI20221122214049873",
+      "accNo" : "01",
+      "ccy" : "TWD",
+      "amt" : 1445.0000
+    } ],
+    "preason" : "test",
+    "itype" : "",
+    "utime" : "2022-11-22 21:40:49"
+  } ],
+  "message" : "read success"
+}
+
+21:41:01.005 [http-nio-8080-exec-4] INFO  Sender -getAllTransfer   - queue://response
+
+21:41:07.249 [http-nio-8080-exec-5] INFO  Sender -updateTransfer   - updateTransfer()
+
+21:41:07.255 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - Message received from request	[/update] queue---
+
+
+21:41:07.255 [org.springframework.jms.JmsListenerEndpointContainer#1-1] INFO  Receiver -receiveFromRequest   - request	[/update] : processing....
+
+
+21:41:07.271 [org.springframework.jms.JmsListenerEndpointContainer#0-1] INFO  Receiver -receiveFromResponse   - Message received from response queue---
+{
+  "mgni" : {
+    "id" : "MGI20221016162721450",
+    "time" : "2022-10-16 16:27:21",
+    "type" : "1",
+    "cmNo" : "MQ",
+    "kacType" : "1",
+    "bankNo" : "123",
+    "ccy" : "USD",
+    "pvType" : "1",
+    "bicaccNo" : "2200546",
+    "amt" : 16666.00,
+    "ctName" : "Echo",
+    "ctTel" : "0987654321",
+    "status" : "0",
+    "cashiList" : [ {
+      "mgniId" : "MGI20221016162721450",
+      "accNo" : "001",
+      "ccy" : "USD",
+      "amt" : 1.00
+    }, {
+      "mgniId" : "MGI20221016162721450",
+      "accNo" : "002",
+      "ccy" : "USD",
+      "amt" : 9999.00
+    }, {
+      "mgniId" : "MGI20221016162721450",
+      "accNo" : "003",
+      "ccy" : "USD",
+      "amt" : 6666.00
+    } ],
+    "preason" : "test",
+    "itype" : "",
+    "utime" : "2022-11-22 21:41:07"
+  },
+  "message" : "update success"
+}
+
+21:41:07.274 [http-nio-8080-exec-5] INFO  Sender -updateTransfer   - queue://response
+

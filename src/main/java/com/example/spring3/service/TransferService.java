@@ -7,7 +7,6 @@ import com.example.spring3.controller.dto.request.ReadRequest;
 import com.example.spring3.controller.dto.request.UpdateRequest;
 import com.example.spring3.controller.dto.response.ReadResponse;
 import com.example.spring3.controller.dto.response.TransferResponse;
-import com.example.spring3.model.CashiRepository;
 import com.example.spring3.model.MgniRepository;
 import com.example.spring3.model.entity.CASHI;
 import com.example.spring3.model.entity.MGNI;
@@ -33,8 +32,6 @@ import java.util.List;
 @Service
 public class TransferService {
 
-    @Autowired
-    private CashiRepository cashiRepository;
     @Autowired
     private MgniRepository mgniRepository;
 
@@ -156,7 +153,7 @@ public class TransferService {
         }
 
         // delete the old cash detail
-        cashiRepository.deleteByMGNI_ID(updateRequest.getId().toUpperCase());
+//        cashiRepository.deleteByMGNI_ID(updateRequest.getId().toUpperCase());
 
         MGNI mgni = new MGNI();
 
@@ -242,7 +239,7 @@ public class TransferService {
     public CASHI createCASHI(String mgniId, String accNo, String ccy, BigDecimal amt) {
         CASHI cashi = new CASHI();
 
-        cashi.setMgniId(mgniId);
+//        cashi.setMgniId(mgniId);
         cashi.setCcy(ccy);
         cashi.setAccNo(accNo);
         cashi.setAmt(amt.setScale(2, RoundingMode.HALF_UP));

@@ -7,10 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-@Repository
-public interface CashiRepository extends JpaRepository<CASHI, CASHI.CASHIID> {
-
-    @Modifying
-    @Query(value = "DELETE FROM cashi WHERE mgni_id=?1",nativeQuery = true)
-    void deleteByMGNI_ID(String MGNI_ID);
-}
+//@Repository
+//public interface CashiRepository extends JpaRepository<CASHI, CASHI.CASHIID> {
+//
+//    @Modifying
+//    @Query(value = "DELETE FROM cashi WHERE mgni_id=?1",nativeQuery = true)
+//    void deleteByMGNI_ID(String MGNI_ID);
+//}

@@ -1,0 +1,60 @@
+21:38:01.668 [background-preinit] INFO  Version -<clinit>   - HV000001: Hibernate Validator 6.2.5.Final
+
+21:38:01.704 [main] INFO  Spring3Application -logStarting   - Starting Spring3Application using Java 11.0.16 on Rorschach with PID 15380 (C:\GitRepo\spring-3\target\classes started by rorsc in C:\GitRepo\spring-3)
+
+21:38:01.707 [main] INFO  Spring3Application -logStartupProfileInfo   - No active profile set, falling back to 1 default profile: "default"
+
+21:38:02.304 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+
+21:38:02.351 [main] INFO  RepositoryConfigurationDelegate -registerRepositoriesIn   - Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+
+21:38:02.893 [main] INFO  TomcatWebServer -initialize   - Tomcat initialized with port(s): 8080 (http)
+
+21:38:02.907 [main] INFO  Http11NioProtocol -log   - Initializing ProtocolHandler ["http-nio-8080"]
+
+21:38:02.907 [main] INFO  StandardService -log   - Starting service [Tomcat]
+
+21:38:02.907 [main] INFO  StandardEngine -log   - Starting Servlet engine: [Apache Tomcat/9.0.65]
+
+21:38:03.016 [main] INFO  [/] -log   - Initializing Spring embedded WebApplicationContext
+
+21:38:03.017 [main] INFO  ServletWebServerApplicationContext -prepareWebApplicationContext   - Root WebApplicationContext: initialization completed in 1273 ms
+
+21:38:03.149 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Starting...
+
+21:38:03.258 [main] INFO  HikariDataSource -getConnection   - HikariPool-1 - Start completed.
+
+21:38:03.300 [main] INFO  LogHelper -logPersistenceUnitInformation   - HHH000204: Processing PersistenceUnitInfo [name: default]
+
+21:38:03.349 [main] INFO  Version -logVersion   - HHH000412: Hibernate ORM core version 5.6.11.Final
+
+21:38:03.518 [main] INFO  Version -<clinit>   - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+
+21:38:03.644 [main] INFO  Dialect -<init>   - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+
+21:38:04.266 [main] INFO  JtaPlatformInitiator -initiateService   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+
+21:38:04.272 [main] INFO  LocalContainerEntityManagerFactoryBean -buildNativeEntityManagerFactory   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+
+21:38:04.721 [main] WARN  JpaBaseConfiguration$JpaWebConfiguration -openEntityManagerInViewInterceptor   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+
+21:38:04.979 [main] INFO  Http11NioProtocol -log   - Starting ProtocolHandler ["http-nio-8080"]
+
+21:38:05.000 [main] INFO  TomcatWebServer -start   - Tomcat started on port(s): 8080 (http) with context path ''
+
+21:38:05.167 [main] INFO  Spring3Application -logStarted   - Started Spring3Application in 3.923 seconds (JVM running for 4.796)
+
+21:38:10.179 [org.springframework.jms.JmsListenerEndpointContainer#0-1] ERROR DefaultMessageListenerContainer -refreshConnectionUntilSuccessful   - Could not refresh JMS Connection for destination 'request' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+21:38:10.179 [org.springframework.jms.JmsListenerEndpointContainer#1-1] ERROR DefaultMessageListenerContainer -refreshConnectionUntilSuccessful   - Could not refresh JMS Connection for destination 'response' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+21:38:15.181 [org.springframework.jms.JmsListenerEndpointContainer#0-1] ERROR DefaultMessageListenerContainer -refreshConnectionUntilSuccessful   - Could not refresh JMS Connection for destination 'request' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+21:38:15.181 [org.springframework.jms.JmsListenerEndpointContainer#1-1] ERROR DefaultMessageListenerContainer -refreshConnectionUntilSuccessful   - Could not refresh JMS Connection for destination 'response' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: connect
+
+21:38:20.197 [SpringApplicationShutdownHook] INFO  LocalContainerEntityManagerFactoryBean -destroy   - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+21:38:20.199 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown initiated...
+
+21:38:20.204 [SpringApplicationShutdownHook] INFO  HikariDataSource -close   - HikariPool-1 - Shutdown completed.
+
